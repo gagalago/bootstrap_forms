@@ -70,7 +70,6 @@ module BootstrapForms
         @args = options
 
         if %w(email_field
-              file_field
               number_field
               password_field
               phone_field
@@ -82,7 +81,11 @@ module BootstrapForms
               url_field).include?(method_name)
 
           @field_options[:class] ||= 'form-control'
+        end
 
+        if %w(file_field).include?(method_name)
+
+          @field_options[:class] ||= ''
         end
 
         control_group_div do
