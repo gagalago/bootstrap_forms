@@ -232,7 +232,7 @@ module BootstrapForms
       name, args = nil, name if name.is_a?(Hash)
       name ||= I18n.t('bootstrap_forms.buttons.cancel')
       @field_options = field_options(args)
-      @field_options[:class] ||= 'btn cancel'
+      @field_options[:class] ||= 'btn btn-default cancel'
       @field_options[:back] ||= :back
       link_to(name, @field_options[:back], :class => @field_options[:class])
     end

@@ -76,7 +76,7 @@ module BootstrapForms
 
       def bootstrap_cancel_tag(*args)
         @field_options = field_options(args)
-        @field_options[:class] ||= 'btn cancel'
+        @field_options[:class] ||= 'btn btn-default cancel'
         link_to(I18n.t('bootstrap_forms.buttons.cancel'), (@field_options[:back] || :back), @field_options)
       end
 
